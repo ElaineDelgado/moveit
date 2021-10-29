@@ -22,7 +22,7 @@ export function CountdownProvider({children}: CountdownProviderProps) {
     const { startNewChallange } = useContext(ChallangesContext);
     
 
-    const [time, setTime] = useState(0.1 * 60);
+    const [time, setTime] = useState(1 * 60);
     const [isActive, setIsActive] = useState(false)
     const [hasFineshed, setHasFinished] = useState(false)
 
@@ -37,7 +37,7 @@ export function CountdownProvider({children}: CountdownProviderProps) {
         clearTimeout(countdownTimeout)
         setIsActive(false);
         setHasFinished(false);
-        setTime(0.1 * 60);
+        setTime(1 * 60);
     }
 
     useEffect( () => {
